@@ -1,0 +1,49 @@
+
+<div>
+<ng-content select=".header"></ng-content>
+<table  class="table table-striped">
+
+<tbody *ngFor="let product of products">
+<tr>
+<td>
+{{product.id}}
+</td>
+<td>
+{{product.nomProduit}}
+</td>
+<td>
+{{product.prix}}
+</td>
+<td>
+<span class="badge rounded-pill bg-success">{{product.stock}}</span>
+
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div>
+<table class="table table-striped table-responsive">
+
+<tbody *ngFor="let product of consommables">
+<tr>
+<td>
+{{product.id}}
+</td>
+<td>
+{{product.nomProduit}}
+</td>
+<td>
+{{product.prix}}
+</td>
+<td>
+<span class="badge rounded-pill bg-success">{{product.stock}}</span>
+
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ng-content select=".link"></ng-content>
